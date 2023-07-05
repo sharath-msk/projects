@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", Courier, monospace;
+  }
+  body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #202020;
+  }
+  .container {
+    position: relative;
+    min-width: 300px;
+    min-height: 400px;
+    padding: 40px 30px 30px;
+    border-radius: 20px;
+  }
+  .container span {
+    color: #fff;
+    position: relative;
+    display: grid;
+    width: 80px;
+    place-items: center;
+    margin: 8px;
+    height: 80px;
+    background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 10px;
+  }
+  .calculator span:active {
+    filter: brightness(1.5);
+  }
+  .calculator span::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #2d2d2d, #4d4d4d);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0009;
+  }
+  .calculator span i {
+    position: relative;
+    font-style: normal;
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+  .calculator {
+    position: relative;
+    display: grid;
+  }
+  .calculator .value {
+    position: relative;
+    grid-column: span 4;
+    height: 100px;
+    width: calc(100% - 20px);
+    left: 10px;
+    border: none;
+    outline: none;
+    background-color: #a7af7c;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
+    text-align: right;
+    padding: 10px;
+    font-size: 2em;
+  }
+  .calculator .clear {
+    grid-column: span 2;
+    width: 180px;
+    background: #f00;
+  }
+  .calculator .clear::before {
+    background: linear-gradient(90deg, #d20000, #ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4;
+  }
+  .calculator .plus {
+    grid-row: span 2;
+    height: 180px;
+  }
+  .calculator .equal {
+    background: goldenrod;
+  }
+  .calculator .equal::before{
+    background: linear-gradient(90deg,rgb(124, 124, 4), rgb(104, 104, 6) );
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4;
+  }
